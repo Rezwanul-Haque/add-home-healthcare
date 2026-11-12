@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Primary meta ===== -->
+  <title>ADD Home Healthcare | Compassionate Home Care in Aurora, CO</title>
+  <meta name="description" content="ADD Home Healthcare provides personal care, homemaker services, in-home support (IHSS), transition coordination, household setup and life skills training in Aurora, Colorado. Compassionate care, right at home.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#80B041">
+  <link rel="canonical" href="__SITE_URL__"><!-- TODO: replace with the live domain -->
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ADD Home Healthcare">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="__SITE_URL__">
+  <meta property="og:title" content="ADD Home Healthcare | Compassionate Care, Right at Home">
+  <meta property="og:description" content="Home healthcare support services that help individuals maintain independence, navigate daily life and enjoy greater comfort in familiar surroundings. Aurora, CO.">
+  <meta property="og:image" content="__SITE_URL__assets/og-image.jpg"><!-- TODO: 1200×630 image -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ADD Home Healthcare — Compassionate Care, Right at Home">
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADD Home Healthcare | Compassionate Care, Right at Home">
+  <meta name="twitter:description" content="Personal care, homemaker services, IHSS, transition coordination, household setup and life skills training in Aurora, CO.">
+  <meta name="twitter:image" content="__SITE_URL__assets/og-image.jpg">
+
+  <!-- ===== Icons ===== -->
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+
+  <!-- ===== Structured data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "MedicalBusiness"],
+        "@id": "__SITE_URL__#business",
+        "name": "ADD Home Healthcare",
+        "url": "__SITE_URL__",
+        "logo": "__SITE_URL__assets/logo.png",
+        "image": "__SITE_URL__assets/og-image.jpg",
+        "description": "Home healthcare support services: personal care, homemaker services, in-home support services (IHSS), transition coordination, household setup and life skills training.",
+        "telephone": "+1-720-579-8854",
+        "faxNumber": "+1-720-368-8972",
+        "email": "addhhc9919@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2851 S Parker Road, Ste. 2-0075A",
+          "addressLocality": "Aurora",
+          "addressRegion": "CO",
+          "postalCode": "80014",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        "areaServed": { "@type": "City", "name": "Aurora, Colorado" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Home care services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Care" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Homemaker Services" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "In-Home Support Services (IHSS)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transition Coordination Services" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Household Setup" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Life Skills Trainers (LST)" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What services does ADD Home Healthcare provide?", "acceptedAnswer": { "@type": "Answer", "text": "We offer Personal Care, Homemaker Services, In-Home Support Services (IHSS), Transition Coordination Services, Household Setup, and Life Skills Training (LST)." } },
+          { "@type": "Question", "name": "Who can benefit from your services?", "acceptedAnswer": { "@type": "Answer", "text": "Individuals who need assistance with daily living, household activities, independent living skills, or transitions in their living arrangements may benefit, depending on service eligibility and availability." } },
+          { "@type": "Question", "name": "How can I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Contact our team to discuss your needs, learn about our services, and explore the next steps." } },
+          { "@type": "Question", "name": "Are services customized to individual needs?", "acceptedAnswer": { "@type": "Answer", "text": "Our service approach is intended to reflect individual needs and goals. Specific arrangements depend on the services available and applicable program requirements." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       Design tokens
+       ========================================================= */
+    :root {
+      --color-ink: #1B1F1A;
+      --color-ink-soft: #4A5244;
+      --color-ink-muted: #6B7064;
+      --color-surface: #FFFFFF;
+      --color-surface-tint: #F4F7EC;
+      --color-line: #E8EAE3;
+      --color-line-tint: #E3E8D6;
+      --color-brand: #80B041;      /* logo green: fills only */
+      --color-brand-deep: #4F7622; /* passes 4.5:1 on white: text & buttons */
+      --color-brand-darker: #3B5A19;
+      --color-lime: #CFD95F;
+      --color-on-dark-muted: #C9CFC0;
+
+      --font-sans: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+
+      --container: 1240px;
+      --gutter: clamp(20px, 4vw, 40px);
+      --section-y: clamp(64px, 8vw, 96px);
+
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
+      --z-header: 100;
+    }
+
+    /* =========================================================
+       Base
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-ink);
+      background: var(--color-surface);
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    h1, h2, h3 { margin: 0; letter-spacing: -0.03em; line-height: 1.06; text-wrap: balance; }
+    h2 { font-size: clamp(32px, 4vw, 44px); font-weight: 800; }
+    h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+    p { margin: 0; text-wrap: pretty; }
+    a { color: var(--color-brand-deep); }
+    a:hover { color: var(--color-brand-darker); }
+    :focus-visible { outline: 3px solid var(--color-lime); outline-offset: 3px; }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    .skip-link {
+      position: absolute; left: 16px; top: -100px; z-index: calc(var(--z-header) + 1);
+      padding: 12px 16px; background: var(--color-ink); color: #fff; border-radius: var(--radius-sm);
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+
+    .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: var(--section-y); }
+    .lede { font-size: 18px; color: var(--color-ink-soft); max-width: 60ch; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 14px 24px; border-radius: var(--radius-sm);
+      font: inherit; font-weight: 700; font-size: 16px; text-decoration: none; cursor: pointer;
+      border: 2px solid transparent; transition: background-color .2s, color .2s, border-color .2s;
+    }
+    .btn--primary { background: var(--color-brand-deep); color: #fff; }
+    .btn--primary:hover { background: var(--color-brand-darker); color: #fff; }
+    .btn--ink { background: var(--color-ink); color: #fff; }
+    .btn--ink:hover { background: #2C3528; color: #fff; }
+    .btn--outline { background: transparent; color: var(--color-ink); border-color: var(--color-ink); }
+    .btn--outline:hover { background: rgba(27, 31, 26, .08); color: var(--color-ink); }
+    .btn--sm { min-height: 44px; padding: 10px 20px; font-size: 15px; }
+
+    /* =========================================================
+       Header
+       ========================================================= */
+    .site-header {
+      position: sticky; top: 0; z-index: var(--z-header);
+      background: rgba(255, 255, 255, .96); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-line);
+    }
+    .site-header__inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
+      padding: 16px var(--gutter);
+    }
+    .brand { display: inline-flex; align-items: center; }
+    .brand img { height: 44px; width: auto; aspect-ratio: 650 / 156; object-fit: contain; }
+    .nav { display: flex; gap: 36px; font-weight: 600; }
+    .nav a { color: var(--color-ink); text-decoration: none; padding-block: 8px; }
+    .nav a:hover { color: var(--color-brand-deep); }
+    .nav-toggle {
+      display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer;
+      color: var(--color-ink); border-radius: var(--radius-sm);
+    }
+    .nav-toggle svg { display: block; margin: auto; }
+    .nav-toggle .icon-close { display: none; }
+    .nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+    .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    @media (max-width: 899px) {
+      .site-header__inner { flex-wrap: wrap; gap: 10px; padding-block: 12px; }
+      .brand img { height: 34px; }
+      .site-header .btn { order: 2; margin-left: auto; min-height: 40px; padding: 8px 14px; font-size: 14px; }
+      .nav-toggle { display: inline-flex; order: 3; flex-shrink: 0; }
+      .nav {
+        display: none; order: 4; flex-basis: 100%; flex-direction: column; gap: 4px;
+        padding: 8px 0 12px; border-top: 1px solid var(--color-line);
+      }
+      .nav[data-open="true"] { display: flex; }
+      .nav a { padding: 12px 4px; font-size: 18px; }
+    }
+
+    /* =========================================================
+       Hero
+       ========================================================= */
+    .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(560px, 100%), 1fr)); }
+    .hero__copy {
+      display: flex; flex-direction: column; justify-content: center; gap: 28px;
+      padding: clamp(56px, 8vw, 88px) clamp(24px, 5vw, 56px) clamp(56px, 8vw, 88px) var(--gutter);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 12px; letter-spacing: .16em; font-weight: 700; color: var(--color-brand-deep); text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--color-lime); }
+    .hero h1 { font-size: clamp(42px, 5.2vw, 68px); font-weight: 800; line-height: 1.02; }
+    .hero__lede { font-size: 19px; color: var(--color-ink-soft); max-width: 520px; }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__media {
+      position: relative; overflow: hidden; background: var(--color-brand);
+      display: flex; align-items: flex-end; padding: clamp(20px, 3vw, 32px);
+    }
+    .hero__motif { position: absolute; top: -40px; right: -60px; width: 320px; opacity: .18; pointer-events: none; }
+    .hero__photo { position: relative; width: 100%; height: clamp(320px, 40vw, 480px); object-fit: cover; border-radius: var(--radius-md); }
+
+    /* =========================================================
+       About
+       ========================================================= */
+    .about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: clamp(32px, 5vw, 64px); align-items: start; }
+    .about__head { display: flex; flex-direction: column; gap: 20px; }
+    .about__body { display: flex; flex-direction: column; gap: 18px; font-size: 18px; color: var(--color-ink-soft); }
+    .about__photo { width: 100%; height: 320px; object-fit: cover; border-radius: var(--radius-md); }
+    .text-link {
+      display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+      color: var(--color-ink); font-weight: 700; text-decoration: none; min-height: 44px;
+      border-bottom: 2px solid var(--color-lime);
+    }
+    .text-link:hover { color: var(--color-brand-deep); }
+
+    /* =========================================================
+       Services
+       ========================================================= */
+    .services { background: var(--color-surface-tint); }
+    .services__head { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); gap: 32px; align-items: end; margin-bottom: 48px; }
+    .services__head > div { display: flex; flex-direction: column; gap: 16px; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
+    .service {
+      display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 32px;
+      background: var(--color-surface); border: 1px solid var(--color-line-tint); border-radius: var(--radius-md);
+      transition: background-color .2s;
+    }
+    .service:hover { background: #FAFBF5; }
+    .service__num { font-size: 15px; font-weight: 800; color: var(--color-brand-deep); letter-spacing: .06em; }
+    .service__body { display: flex; flex-direction: column; gap: 10px; }
+    .service h3 { font-size: 23px; }
+    .service p { color: var(--color-ink-soft); }
+
+    /* =========================================================
+       Why choose us
+       ========================================================= */
+    .why { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); gap: clamp(32px, 5vw, 64px); align-items: start; }
+    .why__head { display: flex; flex-direction: column; gap: 24px; }
+    .why__photo { width: 100%; height: 340px; object-fit: cover; border-radius: var(--radius-md); }
+    .why__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); border-top: 2px solid var(--color-ink); list-style: none; margin: 0; padding: 0; }
+    .why__item { display: flex; flex-direction: column; gap: 12px; padding: 28px 24px 28px 0; border-bottom: 1px solid var(--color-line); }
+    .why__icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--color-lime); display: grid; place-items: center; }
+    .why__item p { color: var(--color-ink-soft); }
+
+    /* =========================================================
+       Approach
+       ========================================================= */
+    .approach { padding-top: 0; }
+    .approach__panel { background: var(--color-ink); color: #fff; border-radius: var(--radius-lg); padding: clamp(32px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px; }
+    .approach__panel h2 { font-size: clamp(30px, 3.6vw, 40px); }
+    .approach__eyebrow { color: var(--color-lime); }
+    .approach__eyebrow::before { background: var(--color-lime); }
+    .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px; counter-reset: step; }
+    .step { display: flex; flex-direction: column; gap: 14px; }
+    .step__marker { display: flex; align-items: center; gap: 12px; }
+    .step__marker::before {
+      counter-increment: step; content: "0" counter(step);
+      width: 40px; height: 40px; border-radius: 50%; background: var(--color-lime); color: var(--color-ink);
+      font-weight: 800; font-size: 15px; display: grid; place-items: center;
+    }
+    .step__marker::after { content: ""; flex: 1; height: 1px; background: rgba(255, 255, 255, .2); }
+    .step:last-child .step__marker::after { display: none; }
+    .step h3 { font-size: 22px; }
+    .step p { color: var(--color-on-dark-muted); line-height: 1.6; }
+
+    /* =========================================================
+       CTA band
+       ========================================================= */
+    .cta { background: var(--color-brand); color: var(--color-ink); }
+    .cta__inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 40px; align-items: center; }
+    .cta__copy { display: flex; flex-direction: column; gap: 18px; }
+    .cta__copy p { font-size: 18px; color: #1F2A17; max-width: 560px; }
+    .cta__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+    @media (max-width: 899px) { .cta__actions { justify-content: flex-start; } }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: clamp(32px, 5vw, 64px); align-items: start; }
+    .faq__head { display: flex; flex-direction: column; gap: 16px; }
+    .faq__list { display: flex; flex-direction: column; gap: 12px; }
+    .faq__item { border: 1px solid var(--color-line-tint); border-radius: var(--radius-md); background: var(--color-surface); }
+    .faq__item[open] { background: var(--color-surface-tint); }
+    .faq__item summary {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 20px 22px; cursor: pointer; list-style: none; font-size: 18px; font-weight: 700;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__item summary::after {
+      content: "+"; flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px;
+      background: var(--color-lime); color: var(--color-ink); display: grid; place-items: center; font-size: 20px; line-height: 1;
+    }
+    .faq__item[open] summary::after { content: "−"; }
+    .faq__item p { padding: 0 22px 22px; color: var(--color-ink-soft); }
+
+    /* =========================================================
+       Contact
+       ========================================================= */
+    .contact { background: var(--color-ink); color: #fff; }
+    .contact__inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: clamp(32px, 5vw, 64px); align-items: start; }
+    .contact__info { display: flex; flex-direction: column; gap: 24px; }
+    .contact__info .lede { color: var(--color-on-dark-muted); }
+    .contact__eyebrow { color: var(--color-lime); }
+    .contact__eyebrow::before { background: var(--color-lime); }
+    .details { margin: 0; display: flex; flex-direction: column; gap: 18px; }
+    .details > div { display: flex; flex-direction: column; gap: 4px; padding-left: 16px; border-left: 2px solid var(--color-lime); }
+    .details dt { font-weight: 700; font-size: 12px; letter-spacing: .12em; color: var(--color-lime); text-transform: uppercase; }
+    .details dd { margin: 0; white-space: pre-line; }
+    .details a { color: #fff; text-decoration: none; }
+    .details a:hover { text-decoration: underline; }
+
+    .form-card { background: var(--color-surface); color: var(--color-ink); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 36px); }
+    .form { display: flex; flex-direction: column; gap: 16px; }
+    .form__row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-weight: 700; font-size: 14px; }
+    .field input, .field select, .field textarea {
+      font: inherit; font-size: 16px; padding: 12px 14px; min-height: 46px;
+      border: 1.5px solid #D4D8CC; border-radius: var(--radius-sm); background: #fff; color: var(--color-ink); width: 100%;
+    }
+    .field textarea { resize: vertical; min-height: 120px; }
+    .field input::placeholder, .field textarea::placeholder { color: var(--color-ink-muted); }
+    .form__note { font-size: 13px; color: var(--color-ink-muted); }
+    .form__success { display: none; flex-direction: column; gap: 12px; min-height: 320px; justify-content: center; }
+    .form-card[data-state="sent"] .form { display: none; }
+    .form-card[data-state="sent"] .form__success { display: flex; }
+    .honeypot { position: absolute; left: -9999px; }
+
+    /* =========================================================
+       Footer
+       ========================================================= */
+    .site-footer { border-top: 1px solid var(--color-line); padding-block: 40px; color: var(--color-ink-soft); }
+    .site-footer__top { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .site-footer__brand { display: flex; flex-direction: column; gap: 12px; max-width: 420px; }
+    .site-footer__brand img { height: 44px; width: 183px; aspect-ratio: 650 / 156; object-fit: contain; align-self: flex-start; }
+    .site-footer__nav { display: flex; flex-wrap: wrap; gap: 22px; font-weight: 600; }
+    .site-footer__nav a, .site-footer__legal a { color: var(--color-ink); text-decoration: none; }
+    .site-footer__nav a:hover, .site-footer__legal a:hover { color: var(--color-brand-deep); }
+    .site-footer__bottom { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--color-line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+    .site-footer__legal { display: flex; gap: 20px; }
+
+    /* =========================================================
+       Motion
+       ========================================================= */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0s !important; animation: none !important; }
+    }
+    @media print {
+      .site-header, .skip-link, .nav-toggle, .form-card, .cta { display: none; }
+      body { color: #000; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#home" aria-label="ADD Home Healthcare — home">
+        <img src="./assets/logo.png" alt="ADD Home Healthcare" width="650" height="156">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--primary btn--sm" href="#contact">Get in Touch</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow">Compassionate care. Comfortable living.</p>
+        <h1 id="hero-title">Compassionate Care,<br>Right at Home.</h1>
+        <p class="hero__lede">At ADD Home Healthcare, we believe everyone deserves to feel safe, supported, and valued. Our home healthcare support services help individuals maintain their independence, navigate daily life, and enjoy greater comfort in familiar surroundings.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#services">Explore Our Services</a>
+          <a class="btn btn--outline" href="#contact">Contact Us Today</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img class="hero__motif" src="./assets/logomark.svg" alt="" aria-hidden="true" width="320" height="320">
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1773227055624-07b515ba87c5?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Caregiver helping a client walk with a walker in her living room" width="1400" height="933" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__head">
+          <p class="eyebrow">About us</p>
+          <h2 id="about-title">Care That Puts People First</h2>
+          <a class="text-link" href="#services">Learn More About Our Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="about__body">
+          <p>ADD Home Healthcare is dedicated to providing supportive services tailored to individual needs. We understand that every person and every home is different. Our goal is to help individuals manage everyday activities, build independence, and experience a better quality of life with dignity and respect.</p>
+          <p>Through personalized support and practical assistance, we help make daily living more comfortable and manageable.</p>
+        </div>
+        <img class="about__photo" src="https://images.unsplash.com/photo-1702648156180-25d8be9c9527?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="A caregiver and a client sitting together on a couch at home" width="1200" height="800" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services__head">
+          <div>
+            <p class="eyebrow">Our services</p>
+            <h2 id="services-title">Personalized Support for Everyday Living</h2>
+          </div>
+          <p class="lede">We offer a range of support services designed to assist individuals with daily activities, household needs, independence, and transitions in their living arrangements.</p>
+        </div>
+        <ol class="service-grid">
+          <li class="service">
+            <span class="service__num" aria-hidden="true">01</span>
+            <div class="service__body">
+              <h3>Personal Care</h3>
+              <p>Support with everyday personal activities to help individuals maintain comfort, dignity, and independence in their daily routines.</p>
+            </div>
+          </li>
+          <li class="service">
+            <span class="service__num" aria-hidden="true">02</span>
+            <div class="service__body">
+              <h3>Homemaker Services</h3>
+              <p>Practical household assistance to help maintain a clean, organized, and comfortable living environment.</p>
+            </div>
+          </li>
+          <li class="service">
+            <span class="service__num" aria-hidden="true">03</span>
+            <div class="service__body">
+              <h3>In-Home Support Services (IHSS)</h3>
+              <p>Individualized support to help people manage daily living activities and remain as independent as possible in their homes.</p>
+            </div>
+          </li>
+          <li class="service">
+            <span class="service__num" aria-hidden="true">04</span>
+            <div class="service__body">
+              <h3>Transition Coordination Services</h3>
+              <p>Guidance and coordination to help individuals navigate changes in living arrangements, services, and support needs.</p>
+            </div>
+          </li>
+          <li class="service">
+            <span class="service__num" aria-hidden="true">05</span>
+            <div class="service__body">
+              <h3>Household Setup</h3>
+              <p>Assistance with organizing household essentials and preparing living spaces to support a comfortable and functional home.</p>
+            </div>
+          </li>
+          <li class="service">
+            <span class="service__num" aria-hidden="true">06</span>
+            <div class="service__body">
+              <h3>Life Skills Trainers (LST)</h3>
+              <p>Practical guidance to help individuals develop everyday living skills, build confidence, and strengthen their independence.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Why choose us ===== -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container why">
+        <div class="why__head">
+          <p class="eyebrow">Why choose ADD Home Healthcare?</p>
+          <h2 id="why-title">Support You Can Feel Good About</h2>
+          <img class="why__photo" src="https://images.unsplash.com/photo-1773227060446-93239a553f1f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="A caregiver spending time with clients in a bright common room" width="1200" height="800" loading="lazy">
+        </div>
+        <ul class="why__list">
+          <li class="why__item">
+            <span class="why__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+            <h3>Person-Centered Approach</h3>
+            <p>We recognize individual needs, preferences, and goals when providing support.</p>
+          </li>
+          <li class="why__item">
+            <span class="why__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <h3>Dignity and Respect</h3>
+            <p>We believe everyone deserves to be treated with kindness, consideration, and respect.</p>
+          </li>
+          <li class="why__item">
+            <span class="why__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+            <h3>Comfort of Home</h3>
+            <p>Our services are designed to support daily living in familiar surroundings.</p>
+          </li>
+          <li class="why__item">
+            <span class="why__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20V7"/></svg></span>
+            <h3>Independence-Focused Support</h3>
+            <p>We aim to help individuals strengthen their abilities and participate more confidently in everyday life.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Approach ===== -->
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="approach__panel">
+          <div>
+            <p class="eyebrow approach__eyebrow">Our approach</p>
+            <h2 id="approach-title">Support Designed Around You</h2>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <div class="step__marker" aria-hidden="true"></div>
+              <h3>Listen and Understand</h3>
+              <p>We learn about your needs, preferences, and daily living goals.</p>
+            </li>
+            <li class="step">
+              <div class="step__marker" aria-hidden="true"></div>
+              <h3>Explore Support Options</h3>
+              <p>We discuss available services and identify appropriate support options.</p>
+            </li>
+            <li class="step">
+              <div class="step__marker" aria-hidden="true"></div>
+              <h3>Move Forward Together</h3>
+              <p>We work toward a support arrangement that reflects individual needs and goals.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA band ===== -->
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container cta__inner">
+        <div class="cta__copy">
+          <h2 id="cta-title">Let's Make Everyday Living Easier.</h2>
+          <p>Whether you need help with daily activities, household tasks, or independent living, ADD Home Healthcare is here to help you explore your support options.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--ink" href="#contact">Get in Touch</a>
+          <a class="btn btn--outline" href="#contact">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faqs" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow">FAQs</p>
+          <h2 id="faq-title">Frequently Asked Questions</h2>
+          <p class="lede">Still have a question? <a href="#contact"><strong>Contact our team.</strong></a></p>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>What services does ADD Home Healthcare provide?</summary>
+            <p>We offer Personal Care, Homemaker Services, In-Home Support Services (IHSS), Transition Coordination Services, Household Setup, and Life Skills Training (LST).</p>
+          </details>
+          <details class="faq__item">
+            <summary>Who can benefit from your services?</summary>
+            <p>Individuals who need assistance with daily living, household activities, independent living skills, or transitions in their living arrangements may benefit, depending on service eligibility and availability.</p>
+          </details>
+          <details class="faq__item">
+            <summary>How can I get started?</summary>
+            <p>Contact our team to discuss your needs, learn about our services, and explore the next steps.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Are services customized to individual needs?</summary>
+            <p>Our service approach is intended to reflect individual needs and goals. Specific arrangements depend on the services available and applicable program requirements.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="eyebrow contact__eyebrow">Contact us</p>
+          <h2 id="contact-title">We're Here to Help</h2>
+          <p class="lede">Have questions about our services? Reach out to ADD Home Healthcare to discuss your needs and learn more about available support.</p>
+          <dl class="details">
+            <div>
+              <dt>Address</dt>
+              <dd><a href="https://maps.google.com/?q=2851+S+Parker+Road+Ste+2-0075A+Aurora+CO+80014" target="_blank" rel="noopener">2851 S Parker Road
+Ste. 2-0075A
+Aurora, CO 80014</a></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+17205798854">720-579-8854</a></dd>
+            </div>
+            <div>
+              <dt>Fax</dt>
+              <dd>720-368-8972</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:addhhc9919@gmail.com">addhhc9919@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Business hours</dt>
+              <dd>Monday–Friday: 9:00 AM–5:00 PM</dd><!-- TODO: confirm hours -->
+            </div>
+          </dl>
+        </div>
+
+        <div class="form-card" data-state="idle">
+          <!--
+            Form handling: point `action` at your form backend (Formspree, Netlify Forms,
+            Basin, or your own endpoint). The inline script below shows the success message
+            after a successful fetch() submission; remove it for a plain full-page POST.
+          -->
+          <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" novalidate>
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Personal Care</option>
+                <option>Homemaker Services</option>
+                <option>In-Home Support Services (IHSS)</option>
+                <option>Transition Coordination Services</option>
+                <option>Household Setup</option>
+                <option>Life Skills Trainers (LST)</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div class="honeypot" aria-hidden="true">
+              <label for="company">Leave this field empty</label>
+              <input id="company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="form__note">We use your details only to respond to your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
+            <button class="btn btn--primary" type="submit">Send Inquiry</button>
+          </form>
+          <div class="form__success" role="status" aria-live="polite">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#4F7622" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+            <h3>Thank you for contacting ADD Home Healthcare.</h3>
+            <p>Your inquiry has been received, and our team will follow up using the contact information you provided.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="./assets/logo.png" alt="ADD Home Healthcare" width="650" height="156" loading="lazy">
+          <p>Compassionate support for everyday living, independence, and comfort at home.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Quick links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© <span id="year">2026</span> ADD Home Healthcare. All rights reserved.</p>
+        <div class="site-footer__legal">
+          <a href="#privacy">Privacy Policy</a><!-- TODO: link to privacy page -->
+          <a href="#terms">Terms of Use</a><!-- TODO: link to terms page -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Mobile navigation
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var open = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!open));
+          toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+          nav.setAttribute('data-open', String(!open));
+        });
+        nav.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.setAttribute('data-open', 'false');
+          }
+        });
+      }
+
+      // Footer year
+      var year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+
+      // Contact form: native validation + async submit with success state
+      var card = document.querySelector('.form-card');
+      var form = document.getElementById('contact-form');
+      if (form && card) {
+        form.addEventListener('submit', function (e) {
+          if (!form.checkValidity()) { form.reportValidity(); e.preventDefault(); return; }
+          if (!window.fetch) return; // fall back to a normal POST
+          e.preventDefault();
+          var button = form.querySelector('[type="submit"]');
+          button.disabled = true;
+          fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+            .then(function (r) { if (!r.ok) throw new Error('Request failed'); card.setAttribute('data-state', 'sent'); })
+            .catch(function () { button.disabled = false; alert('Sorry, something went wrong. Please call us or try again.'); });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

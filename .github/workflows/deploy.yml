@@ -1,0 +1,61 @@
+# Build site/ with `make build` and publish dist/ to GitHub Pages.
+#
+# One-time setup: Settings → Pages → Build and deployment → Source: GitHub Actions.
+#
+# Defaults come from config.mk. To override without editing it, add repository
+# variables (Settings → Secrets and variables → Actions → Variables):
+#   DOMAIN      e.g. www.addhomehealthcare.com  or  <user>.github.io
+#   BASE_PATH   e.g. /  or  /<repo>/
+#   USE_CNAME   1 or 0
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - name: Build site
+        env:
+          DOMAIN: ${{ vars.DOMAIN }}
+          BASE_PATH: ${{ vars.BASE_PATH }}
+          USE_CNAME: ${{ vars.USE_CNAME }}
+        run: |
+          args=()
+          [ -n "$DOMAIN" ]    && args+=("DOMAIN=$DOMAIN")
+          [ -n "$BASE_PATH" ] && args+=("BASE_PATH=$BASE_PATH")
+          [ -n "$USE_CNAME" ] && args+=("USE_CNAME=$USE_CNAME")
+          unset DOMAIN BASE_PATH USE_CNAME
+          make config "${args[@]}"
+          make build "${args[@]}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
