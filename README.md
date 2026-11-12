@@ -54,7 +54,7 @@ make deploy DOMAIN=<user>.github.io BASE_PATH=/<repo>/ USE_CNAME=0
 3. Push to `main`. The workflow builds and deploys the site; the URL appears on the run summary.
 4. For a custom domain, add it under **Settings → Pages → Custom domain** and point your DNS at GitHub Pages (`CNAME` record for `www`, or the four `A` records for an apex domain). Turn on **Enforce HTTPS**.
 
-The workflow uses the values in `config.mk`. To override them without editing the file, add repository variables under **Settings → Secrets and variables → Actions → Variables**: `DOMAIN`, `BASE_PATH`, `USE_CNAME`. For a plain project site, set `DOMAIN=<user>.github.io`, `BASE_PATH=/<repo>/`, `USE_CNAME=0`.
+The workflow builds with the values in `config.mk`; change the domain there (for a plain project site: `DOMAIN=<user>.github.io`, `BASE_PATH=/<repo>/`, `USE_CNAME=0`). After deploying, it smoke-tests the live URL and warns if the `og:image` social card is missing. Edits to only `README.md` or `.gitignore` don't trigger a deploy.
 
 ## Manual deploy (gh-pages branch)
 

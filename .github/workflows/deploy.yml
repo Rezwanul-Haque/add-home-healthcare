@@ -1,56 +1,54 @@
-# Build site/ with `make build` and publish dist/ to GitHub Pages.
-#
-# One-time setup: Settings → Pages → Build and deployment → Source: GitHub Actions.
-#
-# Defaults come from config.mk. To override without editing it, add repository
-# variables (Settings → Secrets and variables → Actions → Variables):
-#   DOMAIN      e.g. www.addhomehealthcare.com  or  <user>.github.io
-#   BASE_PATH   e.g. /  or  /<repo>/
-#   USE_CNAME   1 or 0
-
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
   workflow_dispatch:
 
+# Least privilege: read the repo, mint an OIDC token for the Pages deployment.
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Never let two deployments race. Queue rather than cancel, so a run that is
+# already publishing is allowed to finish.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Validate and package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/configure-pages@v5
+      # Renders site/ into dist/ with the values in config.mk, then runs
+      # `make check`, which fails on any unreplaced __SITE_URL__ /
+      # __BASE_PATH__ / __LASTMOD__ placeholder or missing ./assets/ file.
+      - name: Build and validate
+        run: make build
 
-      - name: Build site
-        env:
-          DOMAIN: ${{ vars.DOMAIN }}
-          BASE_PATH: ${{ vars.BASE_PATH }}
-          USE_CNAME: ${{ vars.USE_CNAME }}
-        run: |
-          args=()
-          [ -n "$DOMAIN" ]    && args+=("DOMAIN=$DOMAIN")
-          [ -n "$BASE_PATH" ] && args+=("BASE_PATH=$BASE_PATH")
-          [ -n "$USE_CNAME" ] && args+=("USE_CNAME=$USE_CNAME")
-          unset DOMAIN BASE_PATH USE_CNAME
-          make config "${args[@]}"
-          make build "${args[@]}"
+      # No `enablement: true` here: creating a Pages site needs repo admin
+      # rights, which GITHUB_TOKEN cannot be granted via `permissions:`, so it
+      # fails with "Resource not accessible by integration". The site has to be
+      # created once out-of-band instead — Settings > Pages with Source set to
+      # "GitHub Actions".
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
+          # .nojekyll is a dotfile and would otherwise be dropped, leaving the
+          # artifact quietly different from what `make build` produces locally.
+          include-hidden-files: true
 
   deploy:
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -58,4 +56,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
+
+      # Pages can report success before the CDN serves the new build, so poll
+      # briefly rather than asserting on the first response.
+      - name: Smoke-test the published site
+        env:
+          URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 10); do
+            if curl -sfL "$URL" | grep -q 'og:image'; then break; fi
+            echo "waiting for $URL to serve the new build ($i/10)"
+            sleep 6
+          done
+          curl -sfL "$URL" | grep -o 'property="og:image" content="[^"]*"'
+          for f in 404.html robots.txt sitemap.xml assets/favicon.svg assets/apple-touch-icon.png assets/logo.png; do
+            code=$(curl -so /dev/null -w '%{http_code}' "${URL}${f}")
+            printf '  %-28s %s\n' "$f" "$code"
+            [ "$code" = "200" ] || { echo "::error::${f} returned ${code}"; exit 1; }
+          done
+          # The social card (site/assets/og-image.jpg) is still a TODO, so a
+          # missing card warns instead of failing the deploy.
+          card=$(curl -sfL "$URL" | grep -o 'property="og:image" content="[^"]*"' | sed -E 's/.*content="([^"]*)"/\1/')
+          code=$(curl -so /dev/null -w '%{http_code}' "$card" || true)
+          printf '  %-28s %s\n' "og:image" "$code"
+          [ "$code" = "200" ] || echo "::warning::og:image ${card} returned ${code} — add site/assets/og-image.jpg (1200x630)"

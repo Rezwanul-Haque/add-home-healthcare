@@ -1,2 +1,7 @@
 dist/
 .DS_Store
+
+#IDE
+.openidea
+.idea
+.vscode
